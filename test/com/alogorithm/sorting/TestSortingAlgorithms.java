@@ -23,14 +23,14 @@ public class TestSortingAlgorithms {
 	@Test
 	public void shouldReturnSortedCollectionFromBubbleSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
-		System.out.println("Data set After Bubble Sorting : \t"));
+		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertNotEquals(actualSortedCollection[2], collection[2]);
 	}
 
 	@Test
 	public void shouldReturnSortedCollectionFromQuickSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
-		System.out.println("Data set After Quick Sorting : \t");
+		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertNotEquals(actualSortedCollection[2], collection[2]);
 	}
 }
