@@ -79,7 +79,8 @@
 		</cobertura-instrument>
 
 		<!-- Coverage Test -->
-		<junit dir="${basedir}" errorproperty="test.error" failureproperty="test.failure" printsummary="withOutAndErr" fork="yes" forkmode="once" haltonerror="true">
+		<junit dir="${basedir}" errorproperty="test.error" failureproperty="test.failure" printsummary="withOutAndErr"
+			   fork="yes" forkmode="once" includeantruntime="true" haltonerror="off">
 			<sysproperty key="net.sourceforge.cobertura.datafile" file="coberturaAlgo.ser" />
 
 			<classpath location="${build.instrumented.dir}" />
