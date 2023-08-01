@@ -95,6 +95,14 @@
 		<cobertura-report srcdir="${src.dir}" destdir="${report.coverage.dir}" datafile="coberturaAlgo.ser" />
 	</target>
 
+	<target name="parallel_cover">
+		<parallel>
+			<antcall target="cover-test"/>
+			<antcall target="cover-test"/>
+			<antcall target="cover-test"/>
+		</parallel>
+	</target>
+
 	<target name="coverage-report-html" depends="cover-test">
 		<!-- Generate an XML file containing the coverage data using	the "srcdir" attribute. -->
 		<cobertura-report srcdir="${src.dir}" destdir="${report.coverage.dir}" format="xml" datafile="coberturaAlgo.ser" />
