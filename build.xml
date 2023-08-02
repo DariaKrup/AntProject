@@ -41,6 +41,12 @@
 		<javac srcdir="${test.dir}" destdir="${build.class.dir}" classpathref="classpath" />
 	</target>
 
+	<target name="compile_fork" depends="clean, init">
+		<javac srcdir="${src.dir}" destdir="${build.class.dir}" debug="on"
+			   fork="true" includeantruntime="true"  classpathref="classpath" />
+		<javac srcdir="${test.dir}" destdir="${build.class.dir}" classpathref="classpath" />
+	</target>
+
 	<target name="unit-test" depends="compile" description="run your test suite and generate report">
 		<junit printsummary="yes" haltonfailure="yes" showoutput="yes" errorProperty="test.error" failureProperty="test.failed" fork="true">
 			<classpath refid="classpath" />
