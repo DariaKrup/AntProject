@@ -26,7 +26,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2024.03"
+version = "2024.07"
 
 project {
 
@@ -41,11 +41,12 @@ project {
         hashiCorpVaultConnection {
             id = "PROJECT_EXT_6"
             name = "HashiCorp Vault (default empty namespace)"
-            url = "https://localhost:8200"
+            url = "https://localhost:8201"
             authMethod = appRole {
                 roleId = "e0d9ef3e-a837-c70c-ea96-46e9870e6567"
                 secretId = "credentialsJSON:339ea782-bc93-4d03-9922-8f56d209a394"
             }
+            failOnError = false
         }
         hashiCorpVaultConnection {
             id = "PROJECT_EXT_7"
