@@ -106,12 +106,31 @@ project {
             apiServerUrl = "https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com"
             authStrategy = serviceAccount()
         }
+        kubernetesConnection {
+            id = "K8S_CONNECTION"
+            name = "EKS Kubernetes Connection"
+            apiServerUrl = "https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com"
+            namespace = "default"
+            authStrategy = eks {
+                accessId = "AKIA5JH2VERVI62P5XDY"
+                secretKey = "credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35"
+                clusterName = "tc-dkrupkina-eks-cluster"
+            }
+        }
         kubernetesExecutor {
             id = "PROJECT_EXT_94"
             connectionId = "PROJECT_EXT_2"
             profileName = "K8S EKS Executor"
             buildsLimit = "3"
             description = "Based on EKS Connection"
+            templateName = "aws-ca-certficate-agent"
+        }
+        kubernetesExecutor {
+            id = "K8S_EXECUTOR"
+            connectionId = "K8S_CONNECTION"
+            profileName = "K8S Executor"
+            buildsLimit = "3"
+            description = "EKS Connection"
             templateName = "aws-ca-certficate-agent"
         }
     }
