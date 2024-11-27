@@ -167,6 +167,15 @@ project {
             userName = "dariakrup"
             password = "credentialsJSON:82cbcea7-18a1-4a18-9e08-c383d88d5f4f"
         }
+        hashiCorpVaultConnection {
+            id = "hashicorpVaultConnection2"
+            name = "HashiCorp Vault (2)"
+            url = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(2)>"""
+            authMethod = appRole {
+                roleId = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(2)>"""
+                secretId = "credentialsJSON:6e709652-82b4-4276-a4df-92814d2c05eb"
+            }
+        }
     }
 }
 
