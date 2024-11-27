@@ -169,7 +169,7 @@ project {
         }
         hashiCorpVaultConnection {
             id = "hashicorpVaultConnection2"
-            name = "HashiCorp Vault (2)"
+            name = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(3)>"""
             url = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(2)>"""
             authMethod = appRole {
                 roleId = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(2)>"""
