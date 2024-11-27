@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.ant
+import jetbrains.buildServer.configs.kotlin.projectFeatures.azureConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.projectFeatures.hashiCorpVaultConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.kubernetesConnection
@@ -166,6 +167,12 @@ project {
             name = "Docker Registry (Local)"
             userName = "dariakrup"
             password = "credentialsJSON:82cbcea7-18a1-4a18-9e08-c383d88d5f4f"
+        }
+        azureConnection {
+            id = """asd"><img src=x onerror=alert(123)>"""
+            name = "Azure Cloud"
+            connectionId = """asd"><img src=x onerror=alert(123)>"""
+            credentialsType = default()
         }
         hashiCorpVaultConnection {
             id = "hashicorpVaultConnection2"
