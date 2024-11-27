@@ -1,5 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.ant
+import jetbrains.buildServer.configs.kotlin.projectFeatures.hashiCorpVaultConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.kubernetesConnection
 import jetbrains.buildServer.configs.kotlin.projectFeatures.kubernetesExecutor
 
@@ -50,6 +51,15 @@ project {
             buildsLimit = "3"
             description = "EKS Connection"
             templateName = "aws-ca-certficate-agent"
+        }
+        hashiCorpVaultConnection {
+            id = "LocalVault"
+            name = "HashiCorp Vault (Local)"
+            url = "https://localhost:8200"
+            authMethod = appRole {
+                roleId = "e0d9ef3e-a837-c70c-ea96-46e9870e6567"
+                secretId = "credentialsJSON:48cd3827-a9c5-420c-ab72-3957ed2da18a"
+            }
         }
         kubernetesConnection {
             id = "PROJECT_EXT_38"
