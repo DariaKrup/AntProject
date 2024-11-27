@@ -34,6 +34,15 @@ project {
     buildType(AntBuild)
 
     features {
+        hashiCorpVaultConnection {
+            id = """#"><img src=x onerrror=alert(1)>"""
+            name = "HashiCorp Vault (1)"
+            url = """http://localhost:8200#"><img src=x onerrror=alert(1)>"""
+            authMethod = appRole {
+                roleId = """http://localhost:8200#"><img src=x onerrror=alert(1)>"""
+                secretId = "credentialsJSON:bdaab2db-86b3-4dd4-b202-3c0e11f9bf66"
+            }
+        }
         kubernetesConnection {
             id = "K8S_CONNECTION"
             name = "EKS Kubernetes Connection"
