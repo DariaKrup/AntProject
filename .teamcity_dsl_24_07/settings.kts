@@ -29,7 +29,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2024.03"
+version = "2024.07"
 
 project {
 
@@ -57,7 +57,8 @@ project {
         }
         hashiCorpVaultConnection {
             id = "PROJECT_EXT_4"
-            name = "HashiCorp Vault (empty, fail)"
+            name = "HashiCorp Vault (empty, fail!)"
+            vaultId = ""
             url = "https://localhost:8200"
             authMethod = appRole {
                 roleId = "e0d9ef3e-a837-c70c-ea96-46e9870e6567"
@@ -71,8 +72,8 @@ object Build : BuildType({
     name = "Build"
 
     params {
-        param("vaultID_docker_password", "%vault:VaultID:passwords_storage_v1/docker!/password%")
         param("empty_github_token", "%vault:passwords_storage_v1/github!/token%")
+        param("vaultID_docker_password", "%vault:VaultID:passwords_storage_v1/docker!/password%")
     }
 
     vcs {
