@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2021.1/project-config.xsd">
+  <name>Kubernetes Connections</name>
+  <parameters />
+  <project-extensions>
+    <extension id="K8S_CONNECTION" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="eks" />
+        <param name="displayName" value="EKS Kubernetes Connection" />
+        <param name="eksAccessId" value="AKIA5JH2VERVI62P5XDY" />
+        <param name="eksClusterName" value="tc-dkrupkina-eks-cluster" />
+        <param name="namespace" value="default" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:eksSecretKey" value="credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35" />
+      </parameters>
+    </extension>
+    <extension id="K8S_EXECUTOR" type="BuildExecutor">
+      <parameters>
+        <param name="buildsLimit" value="3" />
+        <param name="connectionId" value="K8S_CONNECTION" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileDescription" value="EKS Connection" />
+        <param name="profileName" value="K8S Executor" />
+        <param name="templateName" value="aws-ca-certficate-agent" />
+      </parameters>
+    </extension>
+    <extension id="LocalVault" type="OAuthProvider">
+      <parameters>
+        <param name="auth-method" value="approle" />
+        <param name="displayName" value="HashiCorp Vault (Local)" />
+        <param name="endpoint" value="approle" />
+        <param name="gcp-endpoint-path" value="gcp" />
+        <param name="providerType" value="teamcity-vault" />
+        <param name="role-id" value="e0d9ef3e-a837-c70c-ea96-46e9870e6567" />
+        <param name="secure:secret-id" value="credentialsJSON:48cd3827-a9c5-420c-ab72-3957ed2da18a" />
+        <param name="teamcity.vault.requirement" value="%teamcity.vault.supported%" />
+        <param name="url" value="https://localhost:8200" />
+        <param name="vault-namespace" value="" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_1" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="ignoreChangesInDependenciesAndVcsSettings" value="false" />
+        <param name="rootId" value="KubernetesConnections_HttpsGithubComDariaKrupAntProjectGit" />
+        <param name="settingsPath" value=".teamcity_k8s_connections_xml" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_38" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="eks" />
+        <param name="displayName" value="EKS (IAM) Kubernetes Connection" />
+        <param name="eksAccessId" value="AKIA5JH2VERVI62P5XDY" />
+        <param name="eksAssumeIAMRole" value="true" />
+        <param name="eksClusterName" value="tc-dkrupkina-eks-cluster" />
+        <param name="eksIAMRoleArn" value="arn:aws:iam::913206223978:role/dkrupkina-eks-cluster" />
+        <param name="namespace" value="default" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:eksSecretKey" value="credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_55" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="eks" />
+        <param name="displayName" value="EKS (server profile) Kubernetes Connection" />
+        <param name="eksClusterName" value="tc-dkrupkina-eks-cluster" />
+        <param name="eksUseInstanceProfile" value="true" />
+        <param name="namespace" value="default" />
+        <param name="providerType" value="KubernetesConnection" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_56" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="unauthorized" />
+        <param name="displayName" value="Unauthorized Kubernetes Connection" />
+        <param name="providerType" value="KubernetesConnection" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_59" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="dkrupkinaa-tc-dkrupkina-ins-759c9f-4ozsrmd7.hcp.northeurope.azmk8s.io" />
+        <param name="authStrategy" value="oidc" />
+        <param name="displayName" value="AKS OpenID Kubernetes Connection" />
+        <param name="idpIssuerUrl" value="https://northeurope.oic.prod-aks.azure.com/080e4d1b-3521-4847-94da-37050321d1ad/30bbc5fd-baea-4da3-8afd-b21ea0340801/" />
+        <param name="oidcClientId" value="b6f82b73-e2ed-4a4a-8091-2f150dc41274" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:oidcClientSecret" value="credentialsJSON:49f2e1f4-f779-445f-93d5-2d27248952ed" />
+        <param name="secure:oidcRefreshToken" value="credentialsJSON:9ce470f9-bcc9-4c9d-a995-adf5768ca7f9" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_90" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://dkrupkinaa-tc-dkrupkina-ins-759c9f-4ozsrmd7.hcp.northeurope.azmk8s.io" />
+        <param name="authStrategy" value="token" />
+        <param name="displayName" value="AKS Kubernetes Connection (token)" />
+        <param name="namespace" value="default" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:authToken" value="credentialsJSON:9a785d7d-aed5-4f4a-a985-05feeb715e91" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_91" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="client-cert" />
+        <param name="displayName" value="(Key + certificate) Kubernetes Connection" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:caCertData" value="credentialsJSON:97b8daf4-0504-4ac3-9df0-b9ab550cb9e7" />
+        <param name="secure:clientCertData" value="credentialsJSON:a22ffc3e-38b9-4123-a27e-6d86f12478b1" />
+        <param name="secure:clientKeyData" value="credentialsJSON:dfa09549-88d5-4b3c-a1d5-a541202a4e48" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_92" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://dkrupkinaa-tc-dkrupkina-ins-759c9f-4ozsrmd7.hcp.northeurope.azmk8s.io" />
+        <param name="authStrategy" value="user-passwd" />
+        <param name="displayName" value="(Username + password) Kubernetes Connection" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:password" value="credentialsJSON:3182b704-321a-409e-aac5-a838bcb34057" />
+        <param name="username" value="Daria.Krupkina@office365.jetbrains.com" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_93" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="service-account" />
+        <param name="displayName" value="(Default Account) Kubernetes Connection" />
+        <param name="providerType" value="KubernetesConnection" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_94" type="BuildExecutor">
+      <parameters>
+        <param name="buildsLimit" value="3" />
+        <param name="connectionId" value="PROJECT_EXT_2" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileDescription" value="Based on EKS Connection" />
+        <param name="profileName" value="K8S EKS Executor" />
+        <param name="profileServerUrl" value="https://aws-teamcity.dkrupkina.net:8451/" />
+        <param name="templateName" value="aws-ca-certficate-agent" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_98" type="BuildExecutor">
+      <parameters>
+        <param name="connectionId" value="K8S_CONNECTION" />
+        <param name="containerParameters" value="test&quot;} &lt;/script&gt;&lt;img src=x onerror=alert(1)&gt;//" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileName" value="K8s XSS" />
+        <param name="templateName" value="ubuntu-jdk8-agent" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_99" type="OAuthProvider">
+      <parameters>
+        <param name="displayName" value="Docker Registry (Local)" />
+        <param name="providerType" value="Docker" />
+        <param name="repositoryUrl" value="https://docker.io" />
+        <param name="secure:userPass" value="credentialsJSON:82cbcea7-18a1-4a18-9e08-c383d88d5f4f" />
+        <param name="userName" value="dariakrup" />
+      </parameters>
+    </extension>
+    <extension id="hashicorpVaultConnection2" type="OAuthProvider">
+      <parameters>
+        <param name="auth-method" value="approle" />
+        <param name="displayName" value="http://localhost:8200&quot;http://localhost:8200#&quot;&gt;&lt;img src=x onerror=alert(3)&gt;" />
+        <param name="endpoint" value="approle" />
+        <param name="gcp-endpoint-path" value="gcp" />
+        <param name="providerType" value="teamcity-vault" />
+        <param name="role-id" value="http://localhost:8200&quot;http://localhost:8200#&quot;&gt;&lt;img src=x onerror=alert(2)&gt;" />
+        <param name="secure:secret-id" value="credentialsJSON:6e709652-82b4-4276-a4df-92814d2c05eb" />
+        <param name="teamcity.vault.requirement" value="%teamcity.vault.supported%" />
+        <param name="url" value="http://localhost:8200&quot;http://localhost:8200#&quot;&gt;&lt;img src=x onerror=alert(2)&gt;" />
+        <param name="vault-namespace" value="" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
