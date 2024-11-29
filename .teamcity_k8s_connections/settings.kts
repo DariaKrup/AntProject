@@ -176,15 +176,6 @@ project {
                 secretId = "credentialsJSON:6e709652-82b4-4276-a4df-92814d2c05eb"
             }
         }
-        hashiCorpVaultConnection {
-            id = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(3)>"""
-            name = "HashiCorp Vault (2)"
-            url = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(4)>"""
-            authMethod = appRole {
-                roleId = """http://localhost:8200"http://localhost:8200#"><img src=x onerror=alert(5)>"""
-                secretId = "credentialsJSON:e0079f11-c906-4b9b-8aeb-a4751625761b"
-            }
-        }
     }
 }
 
