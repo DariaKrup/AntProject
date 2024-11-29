@@ -71,6 +71,8 @@ project {
 object Build : BuildType({
     name = "Build"
 
+    artifactRules = "secrets.txt"
+
     params {
         param("empty_github_token", "%vault:passwords_storage_v1/github!/token%")
         param("vaultID_docker_password", "%vault:VaultID:passwords_storage_v1/docker!/password%")
