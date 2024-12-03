@@ -95,6 +95,17 @@
         <param name="secure:oidcRefreshToken" value="credentialsJSON:9ce470f9-bcc9-4c9d-a995-adf5768ca7f9" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_89" type="OAuthProvider">
+      <parameters>
+        <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
+        <param name="authStrategy" value="eks" />
+        <param name="displayName" value="Kubernetes Connection" />
+        <param name="eksAccessId" value="AKIA5JH2VERVI62P5XDY" />
+        <param name="eksClusterName" value="tc-dkrupkina-eks-cluster" />
+        <param name="providerType" value="KubernetesConnection" />
+        <param name="secure:eksSecretKey" value="credentialsJSON:5956c87f-9f8f-4ec4-8c89-2874bed09e35" />
+      </parameters>
+    </extension>
     <extension id="PROJECT_EXT_90" type="OAuthProvider">
       <parameters>
         <param name="apiServerUrl" value="https://dkrupkinaa-tc-dkrupkina-ins-759c9f-4ozsrmd7.hcp.northeurope.azmk8s.io" />
