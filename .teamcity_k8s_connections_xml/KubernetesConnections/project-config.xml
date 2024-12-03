@@ -170,6 +170,7 @@
       <parameters>
         <param name="connectionId" value="K8S_CONNECTION" />
         <param name="containerParameters" value="test&quot;} &lt;/script&gt;&lt;img src=x onerror=alert(1)&gt;//" />
+        <param name="enabled" value="false" />
         <param name="executorType" value="KubernetesExecutor" />
         <param name="profileName" value="K8s XSS" />
         <param name="templateName" value="ubuntu-jdk8-agent" />
