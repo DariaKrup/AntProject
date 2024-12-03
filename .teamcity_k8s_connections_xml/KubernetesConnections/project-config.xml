@@ -50,6 +50,14 @@
         <param name="showChanges" value="false" />
       </parameters>
     </extension>
+    <extension id="PROJECT_EXT_105" type="BuildExecutor">
+      <parameters>
+        <param name="connectionId" value="K8S_CONNECTION" />
+        <param name="executorType" value="KubernetesExecutor" />
+        <param name="profileName" value="K8s Executor" />
+        <param name="templateName" value="ubuntu-agent" />
+      </parameters>
+    </extension>
     <extension id="PROJECT_EXT_38" type="OAuthProvider">
       <parameters>
         <param name="apiServerUrl" value="https://A51B42A65F7E54005C95A4D353916627.gr7.eu-west-1.eks.amazonaws.com" />
