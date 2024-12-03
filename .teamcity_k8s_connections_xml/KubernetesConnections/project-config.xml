@@ -158,7 +158,7 @@
       <parameters>
         <param name="buildsLimit" value="3" />
         <param name="connectionId" value="PROJECT_EXT_2" />
-        <param name="enabled" value="false" />
+        <param name="containerParameters" value="a=a1,b=b1" />
         <param name="executorType" value="KubernetesExecutor" />
         <param name="profileDescription" value="Based on EKS Connection" />
         <param name="profileName" value="K8S EKS Executor" />
