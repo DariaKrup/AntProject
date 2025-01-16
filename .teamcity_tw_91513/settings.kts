@@ -120,6 +120,13 @@ object GradleSimple1stProject_Config : BuildType({
     params {
         param("param", "a")
     }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "echo %param%"
+        }
+    }
 })
 
 object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
