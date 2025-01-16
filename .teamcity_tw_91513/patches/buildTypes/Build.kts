@@ -10,15 +10,10 @@ accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("Build")) {
     dependencies {
-        expect(RelativeId("GradleSimple1stProject_Build")) {
+        remove(RelativeId("GradleSimple1stProject_Build")) {
             snapshot {
             }
 
-            artifacts {
-                artifactRules = "*.zip"
-            }
-        }
-        update(RelativeId("GradleSimple1stProject_Build")) {
             artifacts {
                 artifactRules = "*.zip"
             }
@@ -27,6 +22,10 @@ changeBuildType(RelativeId("Build")) {
         add(RelativeId("GradleSimple1stProject_New")) {
             snapshot {
                 reuseBuilds = ReuseBuilds.NO
+            }
+
+            artifacts {
+                artifactRules = "*.zip"
             }
         }
 
