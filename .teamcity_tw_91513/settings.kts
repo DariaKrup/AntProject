@@ -34,7 +34,7 @@ project {
 
     buildType(Build)
 
-   // subProject(GradleSimple1stProject)
+    subProject(GradleSimple1stProject)
 }
 
 object Build : BuildType({
@@ -63,7 +63,7 @@ object Build : BuildType({
         }
     }
 
-    /*dependencies {
+    dependencies {
         dependency(GradleSimple1stProject_New) {
             snapshot {
                 reuseBuilds = ReuseBuilds.NO
@@ -73,11 +73,11 @@ object Build : BuildType({
                 artifactRules = "*.zip"
             }
         }
-    }*/
+    }
 })
 
 
-/*object GradleSimple1stProject : Project({
+object GradleSimple1stProject : Project({
     name = "Gradle Simple [1st project]"
 
     vcsRoot(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
@@ -86,14 +86,14 @@ object Build : BuildType({
     buildType(GradleSimple1stProject_New)
     buildType(GradleSimple1stProject_Build)
     buildType(GradleSimple1stProject_CmdSubproject)
-})*/
+})
 
-//object GradleSimple1stProject_Build : BuildType({
-    //name = "Build"
+object GradleSimple1stProject_Build : BuildType({
+    name = "Build"
 
-    //artifactRules = "**/* => sources.zip"
+    artifactRules = "**/* => sources.zip"
 
-    /*vcs {
+    vcs {
         root(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
     }
 
@@ -162,4 +162,4 @@ object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMas
     url = "https://github.com/DariaKrup/gradle-simple.git"
     branch = "refs/heads/master"
     branchSpec = "refs/heads/*"
-})*/
+})
