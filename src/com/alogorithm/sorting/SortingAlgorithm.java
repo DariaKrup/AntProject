@@ -31,7 +31,7 @@ public class SortingAlgorithm {
 	 * Sort collection with Quick Sort algorithm.
 	 * 
 	 * @param dataCollection
-	 *            unsorted collection
+	 *            unsorted collection of values
 	 * @return sorted collection
 	 */
 	public static int[] sortInQuickSort(int[] dataCollection) {
