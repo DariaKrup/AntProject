@@ -62,6 +62,11 @@ object Build : BuildType({
         perfmon {
         }
     }
+
+    dependencies {
+        snapshot(GradleSimple1stProject_Build) {
+        }
+    }
 })
 
 
