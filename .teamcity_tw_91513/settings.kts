@@ -70,6 +70,7 @@ object GradleSimple1stProject : Project({
 
     vcsRoot(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
 
+    buildType(GradleSimple1stProject_Config)
     buildType(GradleSimple1stProject_CmdSubproject)
     buildType(GradleSimple1stProject_Build)
 })
@@ -111,6 +112,10 @@ object GradleSimple1stProject_CmdSubproject : BuildType({
             scriptContent = "ls -la"
         }
     }
+})
+
+object GradleSimple1stProject_Config : BuildType({
+    name = "Config"
 })
 
 object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
