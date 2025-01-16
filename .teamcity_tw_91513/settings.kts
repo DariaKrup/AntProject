@@ -64,7 +64,7 @@ object Build : BuildType({
     }
 
     dependencies {
-        dependency(GradleSimple1stProject_Build) {
+        dependency(GradleSimple1stProject_New) {
             snapshot {
                 reuseBuilds = ReuseBuilds.NO
             }
@@ -83,8 +83,9 @@ object GradleSimple1stProject : Project({
     vcsRoot(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
 
     buildType(GradleSimple1stProject_Config)
-    buildType(GradleSimple1stProject_CmdSubproject)
+    buildType(GradleSimple1stProject_New)
     buildType(GradleSimple1stProject_Build)
+    buildType(GradleSimple1stProject_CmdSubproject)
 })
 
 object GradleSimple1stProject_Build : BuildType({
@@ -137,6 +138,21 @@ object GradleSimple1stProject_Config : BuildType({
         script {
             id = "simpleRunner"
             scriptContent = "echo %param%"
+        }
+    }
+})
+
+object GradleSimple1stProject_New : BuildType({
+    name = "New"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "ls ./"
         }
     }
 })

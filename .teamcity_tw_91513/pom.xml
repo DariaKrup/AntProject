@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <project>
   <modelVersion>4.0.0</modelVersion>
-  <name>Tw91513buildHistoryAntProject Config DSL Script</name>
-  <groupId>Tw91513buildHistoryAntProject</groupId>
-  <artifactId>Tw91513buildHistoryAntProject_dsl</artifactId>
+  <name>Tw91513AntProject Config DSL Script</name>
+  <groupId>Tw91513AntProject</groupId>
+  <artifactId>Tw91513AntProject_dsl</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <parent>
@@ -22,7 +22,7 @@
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>http://10.128.93.57:8281/app/dsl-plugins-repository</url>
+      <url>http://10.128.93.57:8351/app/dsl-plugins-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
