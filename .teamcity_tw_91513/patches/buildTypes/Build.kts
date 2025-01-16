@@ -19,12 +19,14 @@ changeBuildType(RelativeId("Build")) {
             }
         }
         update(RelativeId("GradleSimple1stProject_Build")) {
-            snapshot {
-                reuseBuilds = ReuseBuilds.NO
-            }
-
             artifacts {
                 artifactRules = "*.zip"
+            }
+        }
+
+        add(RelativeId("GradleSimple1stProject_New")) {
+            snapshot {
+                reuseBuilds = ReuseBuilds.NO
             }
         }
 
