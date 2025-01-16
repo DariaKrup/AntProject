@@ -1,6 +1,7 @@
 package com.genaral.pascaltrangle;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
@@ -40,6 +41,6 @@ public class TestPascalTraingle {
 		assertEquals(PascalTraingle.valueInTrangle(2, 2), expectedValueAt_22);
 		assertEquals(PascalTraingle.valueInTrangle(4, 0), expectedValueAt_40);
 		assertEquals(PascalTraingle.valueInTrangle(6, 3), expectedValueAt_63);
-
+		assertNotEquals(PascalTraingle.valueInTrangle(2, 2), expectedValueAt_63);
 	}
 }
