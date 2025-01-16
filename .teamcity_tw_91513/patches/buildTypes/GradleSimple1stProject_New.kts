@@ -12,5 +12,9 @@ in the project with id = 'GradleSimple1stProject', and delete the patch script.
 create(RelativeId("GradleSimple1stProject"), BuildType({
     id("GradleSimple1stProject_New")
     name = "New"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 }))
 
