@@ -64,7 +64,13 @@ object Build : BuildType({
     }
 
     dependencies {
-        snapshot(GradleSimple1stProject_Build) {
+        dependency(GradleSimple1stProject_Build) {
+            snapshot {
+            }
+
+            artifacts {
+                artifactRules = "*.zip"
+            }
         }
     }
 })
