@@ -1,6 +1,7 @@
 package com.alogorithm.sorting;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.util.Arrays;
 
@@ -32,5 +33,19 @@ public class TestSortingAlgorithms {
 		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
 		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(actualSortedCollection[2], collection[2]);
+	}
+
+	@Test
+	public void shouldReturnSortedCollectionFromQuickSortAlgorithmAdditional() {
+		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
+		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertEquals(actualSortedCollection[4], collection[4]);
+	}
+
+	@Test
+	public void shouldReturnSortedCollectionFromQuickSortAlgorithmNotEquals() {
+		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
+		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertNotEquals(actualSortedCollection[4], collection[2]);
 	}
 }
