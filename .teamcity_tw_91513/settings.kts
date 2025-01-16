@@ -75,6 +75,8 @@ object GradleSimple1stProject : Project({
 object GradleSimple1stProject_Build : BuildType({
     name = "Build"
 
+    artifactRules = "**/* => sources.zip"
+
     vcs {
         root(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
     }
