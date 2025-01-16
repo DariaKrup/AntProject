@@ -69,6 +69,7 @@ object GradleSimple1stProject : Project({
 
     vcsRoot(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
 
+    buildType(GradleSimple1stProject_CmdSubproject)
     buildType(GradleSimple1stProject_Build)
 })
 
@@ -98,6 +99,10 @@ object GradleSimple1stProject_Build : BuildType({
         perfmon {
         }
     }
+})
+
+object GradleSimple1stProject_CmdSubproject : BuildType({
+    name = "CMD subproject"
 })
 
 object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
