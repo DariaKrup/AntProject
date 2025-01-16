@@ -66,6 +66,7 @@ object Build : BuildType({
     dependencies {
         dependency(GradleSimple1stProject_Build) {
             snapshot {
+                reuseBuilds = ReuseBuilds.NO
             }
 
             artifacts {
