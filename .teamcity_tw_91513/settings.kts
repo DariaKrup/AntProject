@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.ant
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -30,6 +31,8 @@ version = "2024.12"
 project {
 
     buildType(Build)
+
+    subProject(GradleSimple1stProject)
 }
 
 object Build : BuildType({
@@ -57,4 +60,38 @@ object Build : BuildType({
         perfmon {
         }
     }
+})
+
+
+object GradleSimple1stProject : Project({
+    name = "Gradle Simple [1st project]"
+
+    vcsRoot(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
+
+    buildType(GradleSimple1stProject_Build)
+})
+
+object GradleSimple1stProject_Build : BuildType({
+    name = "Build"
+
+    vcs {
+        root(GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster)
+    }
+
+    triggers {
+        vcs {
+        }
+    }
+
+    features {
+        perfmon {
+        }
+    }
+})
+
+object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
+    name = "https://github.com/DariaKrup/gradle-simple.git#refs/heads/master"
+    url = "https://github.com/DariaKrup/gradle-simple.git"
+    branch = "refs/heads/master"
+    branchSpec = "refs/heads/*"
 })
