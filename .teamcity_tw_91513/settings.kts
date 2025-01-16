@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.perfmon
 import jetbrains.buildServer.configs.kotlin.buildSteps.ant
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -103,6 +104,13 @@ object GradleSimple1stProject_Build : BuildType({
 
 object GradleSimple1stProject_CmdSubproject : BuildType({
     name = "CMD subproject"
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "ls -la"
+        }
+    }
 })
 
 object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
