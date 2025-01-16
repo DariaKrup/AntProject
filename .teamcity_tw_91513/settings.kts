@@ -116,6 +116,10 @@ object GradleSimple1stProject_CmdSubproject : BuildType({
 
 object GradleSimple1stProject_Config : BuildType({
     name = "Config"
+
+    params {
+        param("param", "a")
+    }
 })
 
 object GradleSimple1stProject_HttpsGithubComDariaKrupGradleSimpleGitRefsHeadsMaster : GitVcsRoot({
