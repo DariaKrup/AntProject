@@ -32,7 +32,7 @@ Contents :
         └── resources
 
 
-Building the Project.
+Building the Project
 ====================
 
 Pre-requisites
