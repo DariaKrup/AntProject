@@ -1,0 +1,30 @@
+package PipelinesWithDefaultPRSettings
+
+import PipelinesWithDefaultPRSettings.buildTypes.*
+import PipelinesWithDefaultPRSettings.vcsRoots.*
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.Project
+
+object Project : Project({
+    id("PipelinesWithDefaultPRSettings")
+    name = "Pipelines with default PR settings"
+
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsBbdatacenterQaTeamcityComScmDksJavaMavenJunitGitRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsGithubComDariaKrupBookingApiPayconiqRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsDariaKrupkina0066devAzureComDariaKrupkina0066TeamCity20ProjectGitSpringPetclinicGitRefsHeadsMain1)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsDariaKrupkina0066devAzureComDariaKrupkina0066TeamCity20ProjectGitSpringPetclinicGitRefsHeadsMain)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsGitlabComTcqaTestTriangleCheckerRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsDariaKrupkina0066devAzureComDariaKrupkina0066TeamCity20ProjectGitTeamCity20ProjectRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_TfsTcqaUser1)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsDariaKrupkina0066devAzureComDariaKrupkina0066TeamCity20ProjectGitTeamCity20ProjectRefsHeadsMaster2)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsDariaKrupkina0066devAzureComDariaKrupkina0066TeamCity20ProjectGitTeamCity20ProjectRefsHeadsMaster1)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsGithubComDariaKrupJavaMavenDemoRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsBitbucketOrgTeamcityTestSampleMavenAppRefsHeadsMaster)
+    vcsRoot(PipelinesWithDefaultPRSettings_PerforceKirInstance)
+    vcsRoot(PipelinesWithDefaultPRSettings_HttpsGheQaTeamcityComDariaKrupkina2sampleDockerfileGitRefsHeadsMain)
+    vcsRoot(PipelinesWithDefaultPRSettings_Tfs2015)
+
+    buildType(PipelinesWithDefaultPRSettings_BuildTestTcqaUser1tfs)
+    buildType(PipelinesWithDefaultPRSettings_BuildTfs2015)
+    buildType(PipelinesWithDefaultPRSettings_BuildAzurePat)
+})
