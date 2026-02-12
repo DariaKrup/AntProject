@@ -33,4 +33,11 @@ public class TestSortingAlgorithms {
 		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
 		assertEquals(actualSortedCollection[2], collection[2]);
 	}
+
+	@Test
+	public void shouldReturnSortedCollectionFromQuickSortAlgorithmSecond() {
+		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
+		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertEquals(actualSortedCollection[2], collection[2]);
+	}
 }
