@@ -1,8 +1,7 @@
 Alogorithms
 ===========
 
-Java imlementations for Algorithms as Traversal, Searching, Sorting...etc
-
+Java imlementations for Algorithms as Traversal, Searching, Sorting...etc.
 
 Contents :
 ==========
