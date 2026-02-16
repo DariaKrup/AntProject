@@ -28,6 +28,13 @@ public class TestSortingAlgorithms {
 	}
 
 	@Test
+	public void shouldFailSortedCollectionFromBubbleSortAlgorithm() {
+		int[] actualSortedCollection = SortingAlgorithm.sortInBubbleSort(collection);
+		System.out.println("Data set After Bubble Sorting : \t" + Arrays.toString(actualSortedCollection));
+		assertEquals(actualSortedCollection[3], collection[2]);
+	}
+
+	@Test
 	public void shouldReturnSortedCollectionFromQuickSortAlgorithm() {
 		int[] actualSortedCollection = SortingAlgorithm.sortInQuickSort(collection);
 		System.out.println("Data set After Quick Sorting : \t" + Arrays.toString(actualSortedCollection));
