@@ -43,7 +43,7 @@ object DSLMilestone3WithConvertation_PipelineWithDisabledTrigger_AntProjectPipel
 
     triggers {
         vcs {
-            branchFilter = "+pr:*"
+            branchFilter = ""
         }
     }
 
