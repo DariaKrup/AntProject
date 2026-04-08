@@ -48,7 +48,6 @@ object DSLMilestone3WithConvertation_PipelineWithDisabledTrigger_AntProjectPipel
     id("Job1")
     name = "Job: Ant"
     allowReuse = true
-    enableDependencyCacheOptimization = false
 
     steps {
         script {
