@@ -41,12 +41,6 @@ object DSLMilestone3WithConvertation_PipelineWithDisabledTrigger_AntProjectPipel
         repository(DslContext.settingsRoot)
     }
 
-    triggers {
-        vcs {
-            branchFilter = ""
-        }
-    }
-
     job(DSLMilestone3WithConvertation_PipelineWithDisabledTrigger_AntProjectPipeline_Job1)
 })
 
